@@ -1,5 +1,5 @@
 {% set name = "amep" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/amep-{{ version }}.tar.gz
-  sha256: 63e555e79ef4b3b24af5cf1a590142ea18095f521e95b5d985a34deca5a5a7e9
+  sha256: 53c09904dff36c88065a7039f08dfc0995aa2601ba7b3eaf9ca7e865f65211b7
 
 build:
   noarch: python
@@ -42,10 +42,32 @@ about:
   home: https://amepproject.de/
   dev_url: https://github.com/amepproject/amep
   doc_url: https://amepproject.de/
-  license: GPL-3.0-or-later
+  license: GPL-3.0 AND BSD-3-Clause
   license_file:
     - LICENSE
     - LICENSES.third-party
+  description: |
+    The Active Matter Evaluation Package (AMEP) is a powerful tool for analyzing 
+    simulation data of active matter systems. It provides a unified framework for 
+    handling both particle-based and continuum simulation data. AMEP provides a 
+    huge variety of analysis methods for both data types that allow to evaluate 
+    various dynamic and static observables based on the trajectories of the particles 
+    or the time evolution of continuum fields. For fast and efficient data handling, 
+    AMEP provides a unified framework for loading and storing simulation data and 
+    analysis results in a compressed, HDF5-based data format. AMEP is written purely 
+    in Python and uses powerful libraries such as NumPy, SciPy, Matplotlib, and 
+    scikit-image commonly used in computational physics. Therefore, understanding, 
+    modifying, and building up on the provided framework is comparatively easy. All 
+    evaluation functions are optimized to run efficiently on HPC (High Performance 
+    Computing) hardware to provide fast computations. To plot and visualize simulation 
+    data and analysis results, AMEP provides an optimized plotting framework based on 
+    the Matplotlib Python library, which allows to easily plot and animate particles, 
+    fields, and lines. Compared to other analysis libraries, the huge variety of analysis 
+    methods combined with the possibility to handle both most common data types used in 
+    soft-matter physics and in active-matter physics in particular, enables the 
+    analysis of a much broader class of simulation data including not only classical 
+    molecular-dynamics or Brownian-dynamics simulations but also any kind of numerical 
+    solutions of partial differential equations.
 
 extra:
   recipe-maintainers:
