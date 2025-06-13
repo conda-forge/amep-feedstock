@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "amep" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/amep-{{ version }}.tar.gz
-  sha256: 2eb87d4d724a78a9beb9f0be3eaa78af0e2fbc952dbe7676d4d11ed0a987baa4
+  sha256: 211cb71da61401c739ca7955ef844a67d8c013f0f74edecaf1e2a566b258650f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
