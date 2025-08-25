@@ -29,6 +29,8 @@ requirements:
     - scipy >=1.10.0
     - scikit-image >=0.20.0
     - tqdm >=4.65.0
+    - gsd >=3.2.0
+    - chemfiles >=0.10.4
 
 test:
   imports:
@@ -41,13 +43,13 @@ test:
 
 about:
   summary: Active Matter Evaluation Package for data analysis of active matter simulations
-  home: https://amepproject.de/
-  dev_url: https://github.com/amepproject/amep
-  doc_url: https://amepproject.de/
-  license: GPL-3.0 AND BSD-3-Clause
+  license: GPL-3.0
   license_file:
     - LICENSE
     - LICENSES.third-party
+  home: https://amepproject.de/
+  dev_url: https://github.com/amepproject/amep
+  doc_url: https://amepproject.de/
   description: |
     The Active Matter Evaluation Package (AMEP) is a powerful tool for analyzing 
     simulation data of active matter systems. It provides a unified framework for 
@@ -73,4 +75,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - hechtprojects
+    - kay-ro
