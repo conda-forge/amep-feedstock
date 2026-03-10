@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "amep" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/amep-{{ version }}.tar.gz
-  sha256: 29fca2ad8b8e04cb3c376cdf821fe561d3d39a0f54ffb20481061d63811c9632
+  sha256: a7e893d3338a2e3c078df6d714e330bd3f864d1166670d1d913f2fa3a73e45ff
 
 build:
   noarch: python
@@ -51,27 +51,13 @@ about:
   dev_url: https://github.com/amepproject/amep
   doc_url: https://amepproject.de/
   description: |
-    The Active Matter Evaluation Package (AMEP) is a powerful tool for analyzing 
-    simulation data of active matter systems. It provides a unified framework for 
-    handling both particle-based and continuum simulation data. AMEP provides a 
-    huge variety of analysis methods for both data types that allow to evaluate 
-    various dynamic and static observables based on the trajectories of the particles 
-    or the time evolution of continuum fields. For fast and efficient data handling, 
-    AMEP provides a unified framework for loading and storing simulation data and 
-    analysis results in a compressed, HDF5-based data format. AMEP is written purely 
-    in Python and uses powerful libraries such as NumPy, SciPy, Matplotlib, and 
-    scikit-image commonly used in computational physics. Therefore, understanding, 
-    modifying, and building up on the provided framework is comparatively easy. All 
-    evaluation functions are optimized to run efficiently on HPC (High Performance 
-    Computing) hardware to provide fast computations. To plot and visualize simulation 
-    data and analysis results, AMEP provides an optimized plotting framework based on 
-    the Matplotlib Python library, which allows to easily plot and animate particles, 
-    fields, and lines. Compared to other analysis libraries, the huge variety of analysis 
-    methods combined with the possibility to handle both most common data types used in 
-    soft-matter physics and in active-matter physics in particular, enables the 
-    analysis of a much broader class of simulation data including not only classical 
-    molecular-dynamics or Brownian-dynamics simulations but also any kind of numerical 
-    solutions of partial differential equations.
+    AMEP is a Python library that focuses on the fast and user-friendly analysis of active and soft matter simulations. It can natively analyze data from molecular dynamics, Brownian dynamics, and continuum simulations from software such as LAMMPS, HOOMD-blue, and GROMACS.
+    
+    With a plethora of methods for calculating observables and visualizing results, AMEP is suitable for calculating complex observables equally for advanced studies of active and soft matter, as well as for beginners in the field. Computationally intensive methods are parallelized to run on systems ranging from laptops and workstations to high-performance computing clusters.
+
+    AMEP utilizes the simplicity of NumPy for users to extract data from the internal functions, which allows for easy extension and individualization of analyses and handling of results and data with existing Python workflows. Additionally, AMEP provides an efficient data format for saving both simulation data and analysis results in a binary file based on the well-established HDF5 file format.
+
+    The methods range from correlation functions and order parameters to cluster detection and coarse-graining methods. Examples and the documentation can be found on our homepage amepproject.de. AMEP can be installed via pip and conda.
 
 extra:
   recipe-maintainers:
