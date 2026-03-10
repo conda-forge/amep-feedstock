@@ -42,7 +42,7 @@ test:
     - python {{ python_min }}
 
 about:
-  summary: Active Matter Evaluation Package for data analysis of active matter simulations
+  summary: Python data analysis package for active and soft matter simulations
   license: GPL-3.0
   license_file:
     - LICENSE
